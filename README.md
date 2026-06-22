@@ -84,5 +84,3 @@ Mnemosync leverages the advanced multimodal capabilities of **Gemini 3 Flash** a
 3. **Resilient Multimodal Fallback**: To satisfy the \"Functionality\" requirement of the hackathon, we implemented a unique hybrid architecture. If Gemini 3 encounters rate limits, the system seamlessly transitions to Gemini 2.5 Flash for continuous operation, ensuring that the Alzheimer's patient is never left without their digital companion.
 
 ---
-
-*Developed for the Gemini 3 Hackathon 2026.*
