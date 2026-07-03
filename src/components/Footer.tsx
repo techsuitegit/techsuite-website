@@ -11,26 +11,24 @@ export default function Footer() {
 
         <div className="mb-16">
           <Image
-  src="/logoo.png"
+  src="/Logo (1).png"
   alt="Techsuite"
-  width={185}
+  width={190}
   height={48}
   className="h-12 w-auto object-contain"
 />
 
-          <p className="mt-3 text-3xl font-semibold leading-tight">
-            Delivering Trust.
-          </p>
+          
         </div>
 
-        <div className="grid gap-14 lg:grid-cols-4 md:grid-cols-2">
+        <div className="grid gap-17 lg:grid-cols-4 md:grid-cols-2">
 
           <div>
-            <h3 className="text-3xl font-medium mb-6">
+            <h4 className="text-xl font-medium mb-2">
               Company
-            </h3>
+            </h4>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
 
               <Link href="/" className="hover:text-indigo-600 transition">
                 Home
@@ -52,11 +50,11 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-3xl font-medium mb-6">
+            <h4 className="text-2xl font-medium mb-4">
               Services
-            </h3>
+            </h4>
 
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
 
               <Link href="/services/erp" className="hover:text-indigo-600 transition">
                 ERP Solutions
@@ -87,11 +85,11 @@ export default function Footer() {
 
           <div className="lg:col-span-2">
 
-            <h3 className="text-4xl font-medium mb-4">
+            <h4 className="text-2xl font-medium mb-2">
               Stay up to date
-            </h3>
+            </h4>
 
-            <p className="text-slate-600 text-lg mb-8">
+            <p className="text-slate-600 text-sm mb-4">
               Get the latest updates and exclusive tips to boost your sales
             </p>
 
@@ -104,8 +102,8 @@ export default function Footer() {
                   flex-1
                   rounded-xl
                   bg-indigo-100
-                  px-6
-                  py-4
+                  px-4
+                  py-3
                   outline-none
                   focus:ring-2
                   focus:ring-indigo-500
@@ -133,44 +131,26 @@ export default function Footer() {
 
         </div>
 
-        <div className="mt-20 border-t border-slate-300 pt-8">
+        <div className="mt-1  pt-8">
 
-          <div className="flex flex-col lg:flex-row justify-between items-center gap-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-9">
 
             <p className="text-slate-700 text-center lg:text-left">
               © {new Date().getFullYear()} All rights reserved. Techsuite Systems
               Private Limited.
             </p>
 
-            <div className="flex flex-col items-center lg:items-end gap-5">
+            <div className="flex flex-col items-center lg:items-end gap-5 mt-5">
 
               <a
                 href="mailto:contact@techsuitesystems.com"
                 className="font-semibold hover:text-indigo-600 transition"
               >
                 contact@techsuitesystems.com
+                
               </a>
 
-              <div className="flex gap-5">
-
-                <a
-                  href="mailto:contact@techsuitesystems.com"
-                  className="
-                    h-11
-                    w-11
-                    rounded-full
-                    bg-white
-                    shadow
-                    flex
-                    items-center
-                    justify-center
-                    hover:bg-indigo-500
-                    hover:text-white
-                    transition
-                  "
-                >
-                  <Mail size={20} />
-                </a>
+              
 
                 
 
@@ -182,7 +162,7 @@ export default function Footer() {
 
         </div>
 
-      </div>
+      
     </footer>
   );
 }

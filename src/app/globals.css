@@ -39,3 +39,16 @@ body {
   animation: marquee 10s linear infinite;
 }
 
+@keyframes scrollLogos {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scrollLogos 18s linear infinite;
+}

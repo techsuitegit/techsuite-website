@@ -107,17 +107,7 @@ export default function Services() {
       <div className="mx-auto max-w-7xl relative z-10">
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-20 relative">
-          {/* Honeycomb Pattern behind/above the Title */}
-          <div className="absolute left-1/2 -top-16 -translate-x-1/2 w-72 h-36 pointer-events-none opacity-[0.08] hidden sm:block">
-            <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
-              <defs>
-                <pattern id="title-hexagons" width="20" height="17.32" patternUnits="userSpaceOnUse">
-                  <path d="M10 0 L20 5.77 L20 17.32 L10 23.09 L0 17.32 L0 5.77 Z" fill="none" stroke="#4f46e5" strokeWidth="1" />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#title-hexagons)" />
-            </svg>
-          </div>
+         
 
           {/* Badge */}
           <div className="inline-flex items-center gap-1.5 bg-slate-100/80 border border-slate-200 px-4 py-1.5 rounded-full mb-6 relative z-10">

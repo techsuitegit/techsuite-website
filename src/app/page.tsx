@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import Services from "@/components/HomeMainC";
 import StatsCard from "@/components/countups";
 import FocusIndustries from "@/components/FocusIndustries";
+import Partners from "@/components/partners";
 
 function StatsSection() {
   const stats = [
@@ -56,6 +57,7 @@ export default function HomePage() {
         <Services />
       </main>
       <FocusIndustries />
+      <Partners />
       <Footer />
     </div>
   );
