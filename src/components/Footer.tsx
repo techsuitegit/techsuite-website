@@ -13,7 +13,7 @@ export default function Footer() {
           <Image
   src="/logoo.png"
   alt="Techsuite"
-  width={180}
+  width={185}
   height={48}
   className="h-12 w-auto object-contain"
 />
