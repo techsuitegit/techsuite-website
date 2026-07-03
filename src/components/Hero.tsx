@@ -33,8 +33,8 @@ export default function Hero() {
         >
           <span >Innovative</span>
           <span className="mt-2 pb-2 pt-1">Reliable</span>
-          <span className="bg-linear-to-r from-orange-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent font-bold text-[50px] sm:text-[50px] lg:text-[80px] mt-5 pb-2">
-            Client-Centric
+          <span className="bg-linear-to-r from-orange-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent pb-2 text-[65px] sm:text-[90px] lg:text-[75px]">
+              Client-Centric
           </span>
         </h1>
 

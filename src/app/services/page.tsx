@@ -137,9 +137,9 @@ export default function ServicesPage() {
           </div>
 
           {/* Heading */}
-          <h1 className="flex flex-col text-center text-[45px] sm:text-[60px] lg:text-[70px] font-bold tracking-tight text-[#2d2d2d] leading-[1.1] md:leading-[1.05]">
+          <h1 className="flex flex-col text-center text-[55px] sm:text-[51px] lg:text-[51px] font-bold tracking-tight text-[#2d2d2d] leading-[1.1] md:leading-[1.05]">
             <span>Innovative Reliable</span>
-            <span className="bg-linear-to-r from-orange-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent pb-2">
+            <span className="bg-linear-to-r from-orange-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent pb-2 text-[65px] sm:text-[90px] lg:text-[80px]">
               Client-Centric
             </span>
           </h1>
