@@ -31,26 +31,22 @@ export default function ServicePageTemplate({
 
       <main className="flex-1">
         
-        {/* Header Hero Section */}
+        
         <section className="relative overflow-hidden bg-slate-50 border-b border-slate-100 py-24 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
             
-            {/* Tagline */}
             <span className="bg-[#6875f5] text-white px-4 py-1.5 rounded-md text-xs font-semibold uppercase tracking-wider mb-6">
               Services
             </span>
 
-            {/* Title */}
             <h1 className="text-[36px] sm:text-[50px] lg:text-[60px] font-bold tracking-tight text-[#2d2d2d] leading-tight mb-4">
               {title}
             </h1>
 
-            {/* Tagline text */}
             <p className="text-[#6875f5] text-[14px] sm:text-[16px] font-bold tracking-wider mb-6 uppercase max-w-2xl">
               {tagline}
             </p>
 
-            {/* Description */}
             <p className="text-slate-500 text-[15px] sm:text-[17px] leading-relaxed max-w-3xl">
               {description}
             </p>
@@ -58,7 +54,6 @@ export default function ServicePageTemplate({
           </div>
         </section>
 
-        {/* Sub Services Detail Cards */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-[28px] sm:text-[36px] font-bold text-slate-900">
@@ -91,7 +86,6 @@ export default function ServicePageTemplate({
           </div>
         </section>
 
-        {/* CTA section matching the screenshot */}
         <section className="bg-slate-50 border-t border-slate-100 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
             
