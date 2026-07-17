@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Cloud, Star, History, HelpCircle, Zap, Users, Check, Headphones } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function AiAutomationPage() {
   const [showEmail, setShowEmail] = useState(false);
@@ -65,11 +66,8 @@ export default function AiAutomationPage() {
 
           {/* Main Colored Gradient Title */}
           <h1 className="text-[44px] sm:text-[54px] lg:text-[60px] font-extrabold tracking-tight mb-8 leading-tight">
-            <span className="bg-gradient-to-r from-[#FFB285] to-[#FF7096] bg-clip-text text-transparent block sm:inline">
-              AI & Intelligent
-            </span>{" "}
-            <span className="bg-gradient-to-r from-[#9181FC] to-[#5DBEFF] bg-clip-text text-transparent block sm:inline">
-              Automation
+            <span className="bg-gradient-to-r from-orange-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent block sm:inline">
+              AI & Intelligent Automation
             </span>
           </h1>
 
@@ -95,9 +93,13 @@ export default function AiAutomationPage() {
             {servicesList.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <div
+                <motion.div
                   key={index}
-                  className="border border-[#e5e7eb] rounded-[12px] p-8 bg-white hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 flex flex-col justify-between min-h-[180px]"
+                  initial={{ opacity: 0, y: 70 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-120px" }}
+                  transition={{ duration: 0.9, delay: (index % 2) * 0.2 }}
+                  className="border border-[#e5e7eb] rounded-[12px] p-8 bg-white hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300 flex flex-col justify-between min-h-[160px]"
                 >
                   <div>
                     <div className="text-[#5D5CFF] mb-3">
@@ -110,14 +112,20 @@ export default function AiAutomationPage() {
                       {service.description}
                     </p>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
         </section>
 
         {/* Why Choose Section */}
-        <section className="py-12 px-6 max-w-4xl mx-auto">
+        <motion.section 
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.9 }}
+          className="py-12 px-6 max-w-4xl mx-auto"
+        >
           <h3 className="text-xl sm:text-2xl font-bold text-center text-gray-900 mb-8">
             Why TechSuite for Automation?
           </h3>
@@ -150,10 +158,16 @@ export default function AiAutomationPage() {
               </li>
             </ul>
           </div>
-        </section>
+        </motion.section>
 
         {/* Bottom CTA Banner */}
-        <section className="pb-24 px-6 max-w-4xl mx-auto">
+        <motion.section 
+          initial={{ opacity: 0, y: 70 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 1.0 }}
+          className="pb-24 px-6 max-w-4xl mx-auto"
+        >
           {/* Gradient matches the exact peach-pink-lavender smooth transition */}
           <div className="relative overflow-visible rounded-[14px] bg-gradient-to-r from-[#FFE7D9] via-[#FFF1F3] to-[#E9EAFF] p-10 sm:p-12 text-center shadow-sm border border-white/50">
             <h3 className="text-[26px] sm:text-[30px] font-extrabold text-[#111827] mb-2 tracking-tight">
@@ -183,7 +197,7 @@ export default function AiAutomationPage() {
               )}
             </div>
           </div>
-        </section>
+        </motion.section>
       </main>
 
       <Footer />

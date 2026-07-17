@@ -20,30 +20,30 @@ export default function Reg() {
   } = useForm<FormData>();
 
   const onSubmit = async (data: FormData) => {
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-      const result = await response.json().catch(() => ({ success: false }));
+    const result = await response.json();
 
-      console.log(result);
+    console.log(result);
 
-      if (result.success) {
-        alert(result.message || "Form submitted successfully!");
-        reset();
-      } else {
-        alert(result.message || "Something went wrong!");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Error connecting to the server.");
+    if (result.success) {
+      alert("Form submitted successfully!");
+      reset();
+    } else {
+      alert("Something went wrong!");
     }
-  };
+  } catch (error) {
+    console.error(error);
+    alert("Error connecting to the server.");
+  }
+};
 
   return (
     <section className="w-full bg-white py-12 px-5">

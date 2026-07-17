@@ -6,6 +6,24 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function ServicesPage() {
+  const [isHeaderVisible, setIsHeaderVisible] = React.useState(false);
+  const [isSubtextVisible, setIsSubtextVisible] = React.useState(false);
+
+  React.useEffect(() => {
+    const headerTimer = setTimeout(() => {
+      setIsHeaderVisible(true);
+    }, 500);
+
+    const subtextTimer = setTimeout(() => {
+      setIsSubtextVisible(true);
+    }, 1500);
+
+    return () => {
+      clearTimeout(headerTimer);
+      clearTimeout(subtextTimer);
+    };
+  }, []);
+
   const items = [
     {
       id: "erp",
@@ -15,18 +33,7 @@ export default function ServicesPage() {
       linkText: "Explore ERP Services",
       route: "/services/erp",
       side: "right",
-      icon: (
-        <svg className="w-12 h-12 text-[#6875f5]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="8" y="12" width="48" height="32" rx="4" stroke="currentColor" strokeWidth="2.5" />
-          <path d="M24 44L20 52H44L40 44" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M32 44V52" stroke="currentColor" strokeWidth="2.5" />
-          <circle cx="20" cy="28" r="3" fill="currentColor" />
-          <circle cx="32" cy="22" r="3" fill="currentColor" />
-          <circle cx="44" cy="28" r="3" fill="currentColor" />
-          <path d="M23 28H29L32 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          <path d="M41 28H35L32 25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      )
+      icon: <img src="/erp.png" alt="ERP Solutions" className="w-12 h-12 object-contain" />
     },
     {
       id: "cloud",
@@ -36,14 +43,7 @@ export default function ServicesPage() {
       linkText: "Explore Cloud Services",
       route: "/services/cloud-services",
       side: "left",
-      icon: (
-        <svg className="w-12 h-12 text-[#6875f5]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M18 38C15 38 12 35.5 12 32C12 28.5 15 26 18 26C19 21 23 18 29 18C35 18 39 22 40 26C44 26 48 28.5 48 32C48 35.5 44 38 41 38H18Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-          <rect x="20" y="32" width="24" height="12" rx="2" stroke="currentColor" strokeWidth="2.5" />
-          <line x1="24" y1="38" x2="26" y2="38" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="30" y1="38" x2="32" y2="38" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-        </svg>
-      )
+      icon: <img src="/cloud.png" alt="Cloud Services" className="w-12 h-12 object-contain" />
     },
     {
       id: "analytics",
@@ -53,15 +53,7 @@ export default function ServicesPage() {
       linkText: "Explore Analytics",
       route: "/services/planning-analytics",
       side: "right",
-      icon: (
-        <svg className="w-12 h-12 text-[#6875f5]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 48H52" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M16 40L28 28L38 34L48 20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-          <circle cx="48" cy="20" r="4" stroke="currentColor" strokeWidth="2" />
-          <circle cx="36" cy="28" r="6" stroke="currentColor" strokeWidth="2" />
-          <line x1="40.5" y1="32.5" x2="46" y2="38" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      )
+      icon: <img src="/analytics.png" alt="Planning & Analytics" className="w-12 h-12 object-contain" />
     },
     {
       id: "automation",
@@ -71,19 +63,7 @@ export default function ServicesPage() {
       linkText: "Explore Automation",
       route: "/services/ai-automation",
       side: "left",
-      icon: (
-        <svg className="w-12 h-12 text-[#6875f5]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="16" y="16" width="32" height="32" rx="8" stroke="currentColor" strokeWidth="2.5" />
-          <circle cx="26" cy="28" r="3" fill="currentColor" />
-          <circle cx="38" cy="28" r="3" fill="currentColor" />
-          <path d="M26 38C26 38 29 41 32 41C35 41 38 38 38 38" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-          <line x1="12" y1="28" x2="16" y2="28" stroke="currentColor" strokeWidth="2.5" />
-          <line x1="12" y1="34" x2="16" y2="34" stroke="currentColor" strokeWidth="2.5" />
-          <line x1="48" y1="28" x2="52" y2="28" stroke="currentColor" strokeWidth="2.5" />
-          <line x1="48" y1="34" x2="52" y2="34" stroke="currentColor" strokeWidth="2.5" />
-          <path d="M32 16V10M30 10H34" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        </svg>
-      )
+      icon: <img src="/automation.png" alt="AI & Intelligent Automation" className="w-12 h-12 object-contain" />
     },
     {
       id: "cybersecurity",
@@ -93,32 +73,17 @@ export default function ServicesPage() {
       linkText: "Explore Cybersecurity",
       route: "/services/cybersecurity",
       side: "right",
-      icon: (
-        <svg className="w-12 h-12 text-[#6875f5]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M32 12C32 12 44 15 44 24V36C44 44 32 50 32 50C32 50 20 44 20 36V24C20 15 32 12 32 12Z" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round" />
-          <rect x="27" y="28" width="10" height="8" rx="1" stroke="currentColor" strokeWidth="2" />
-          <path d="M29 28V25C29 23.3 30.3 22 32 22C33.7 22 35 23.3 35 25V28" stroke="currentColor" strokeWidth="2" />
-        </svg>
-      )
+      icon: <img src="/security.png" alt="Cyber Security" className="w-12 h-12 object-contain" />
     },
     {
       id: "infrastructure",
       title: "SMART SPACES & IT INFRASTRUCTURE",
       tagline: "DESIGNING INTELLIGENT WORKSPACES AND RESILIENT IT ENVIRONMENTS.",
-      desc: "We Design And Implement Robust, Scalable IT Infrastructure And Smart Workplace Environments—Laying The Foundation For Seamless Digital Operations.",
+      desc: "We Design And Implement Robust, Scalable IT Infrastructure And Smart Workplace Environments—Laying the Foundation For Seamless Digital Operations.",
       linkText: "Explore Smart Infrastructure",
       route: "/services/smart-spaces",
       side: "left",
-      icon: (
-        <svg className="w-12 h-12 text-[#6875f5]" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="22" y="24" width="8" height="24" stroke="currentColor" strokeWidth="2" />
-          <rect x="34" y="16" width="10" height="32" stroke="currentColor" strokeWidth="2" />
-          <path d="M12 48H52" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M14 26C16 23 20 23 22 26" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          <path d="M12 22C16 18 22 18 26 22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          <circle cx="16" cy="34" r="2" fill="currentColor" />
-        </svg>
-      )
+      icon: <img src="/infrastructure.png" alt="Smart Spaces & IT Infrastructure" className="w-12 h-12 object-contain" />
     }
   ];
 
@@ -137,7 +102,10 @@ export default function ServicesPage() {
           </div>
 
           {/* Heading */}
-          <h1 className="flex flex-col text-center text-[55px] sm:text-[51px] lg:text-[51px] font-bold tracking-tight text-[#2d2d2d] leading-[1.1] md:leading-[1.05]">
+          <h1 
+            className="flex flex-col text-center text-[55px] sm:text-[51px] lg:text-[51px] font-bold tracking-tight text-[#2d2d2d] leading-[1.1] md:leading-[1.05] transition-opacity duration-1000"
+            style={{ opacity: isHeaderVisible ? 1 : 0 }}
+          >
             <span>Innovative Reliable</span>
             <span className="bg-linear-to-r from-orange-400 via-pink-400 to-indigo-500 bg-clip-text text-transparent pb-2 text-[65px] sm:text-[90px] lg:text-[80px]">
               Client-Centric
@@ -145,7 +113,10 @@ export default function ServicesPage() {
           </h1>
 
           {/* Subtext */}
-          <p className="mt-8 max-w-3xl text-center text-[15px] sm:text-[16px] text-slate-500 font-normal leading-relaxed">
+          <p 
+            className="mt-8 max-w-3xl text-center text-[15px] sm:text-[16px] text-slate-500 font-normal leading-relaxed transition-opacity duration-1000"
+            style={{ opacity: isSubtextVisible ? 1 : 0 }}
+          >
             At TechSuite, our vision is to empower businesses with transformative technology that drives efficiency, agility, and innovation. We are committed to delivering trust, excellence, and customer success through cutting-edge solutions in ERP, Analytics, AI, and Cloud Services.
           </p>
 
